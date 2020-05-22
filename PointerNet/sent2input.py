@@ -25,7 +25,7 @@ def read_case_name(own='extractor', version=3, short=False):
     lni_names = {}
     ## choose short_case_name or full_case_name
     if short:
-        sql_name = """cc""" % (own, version)
+        sql_name = ''
         names_df = pd.read_sql_query(sql_name, cat_engine)
         for row in names_df.itertuples():
             _, lni, short_case_name = row
